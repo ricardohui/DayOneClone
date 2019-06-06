@@ -12,6 +12,10 @@
 		A71A921122A49BEF005F2EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71A920F22A49BEF005F2EBB /* Main.storyboard */; };
 		A71A921322A49BF3005F2EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71A921222A49BF3005F2EBB /* Assets.xcassets */; };
 		A71A921622A49BF3005F2EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71A921422A49BF3005F2EBB /* LaunchScreen.storyboard */; };
+		A71A921E22A72F37005F2EBB /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A921D22A72F37005F2EBB /* JournalDetailViewController.swift */; };
+		A71A922022A72F6A005F2EBB /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */; };
+		A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */; };
+		A71A922422A72FC4005F2EBB /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A71A921222A49BF3005F2EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A71A921522A49BF3005F2EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A71A921722A49BF3005F2EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71A921D22A72F37005F2EBB /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
+		A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
+		A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
+		A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				A71A920B22A49BEF005F2EBB /* AppDelegate.swift */,
 				A71A920D22A49BEF005F2EBB /* ViewController.swift */,
 				A71A920F22A49BEF005F2EBB /* Main.storyboard */,
+				A71A921D22A72F37005F2EBB /* JournalDetailViewController.swift */,
+				A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */,
+				A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */,
+				A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */,
 				A71A921222A49BF3005F2EBB /* Assets.xcassets */,
 				A71A921422A49BF3005F2EBB /* LaunchScreen.storyboard */,
 				A71A921722A49BF3005F2EBB /* Info.plist */,
@@ -136,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71A920E22A49BEF005F2EBB /* ViewController.swift in Sources */,
+				A71A922422A72FC4005F2EBB /* PhotoCollectionViewController.swift in Sources */,
+				A71A921E22A72F37005F2EBB /* JournalDetailViewController.swift in Sources */,
+				A71A922022A72F6A005F2EBB /* JournalTableViewController.swift in Sources */,
 				A71A920C22A49BEF005F2EBB /* AppDelegate.swift in Sources */,
+				A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
