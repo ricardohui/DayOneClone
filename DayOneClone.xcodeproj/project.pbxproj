@@ -16,9 +16,14 @@
 		A71A922022A72F6A005F2EBB /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */; };
 		A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */; };
 		A71A922422A72FC4005F2EBB /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */; };
+		A71A922622AA4909005F2EBB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922522AA4909005F2EBB /* Models.swift */; };
+		D53E78DE970E5A3BF99655DF /* Pods_DayOneClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014D20FC9C1940087399CD81 /* Pods_DayOneClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014D20FC9C1940087399CD81 /* Pods_DayOneClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayOneClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		147479F32B6A4D8FB5311C64 /* Pods-DayOneClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayOneClone.debug.xcconfig"; path = "Target Support Files/Pods-DayOneClone/Pods-DayOneClone.debug.xcconfig"; sourceTree = "<group>"; };
+		9FB68F68C4254FC51D382A6D /* Pods-DayOneClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayOneClone.release.xcconfig"; path = "Target Support Files/Pods-DayOneClone/Pods-DayOneClone.release.xcconfig"; sourceTree = "<group>"; };
 		A71A920822A49BEF005F2EBB /* DayOneClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayOneClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71A920B22A49BEF005F2EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A71A920D22A49BEF005F2EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
 		A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		A71A922522AA4909005F2EBB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53E78DE970E5A3BF99655DF /* Pods_DayOneClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2251AC984F0A2ED3F998A54A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				147479F32B6A4D8FB5311C64 /* Pods-DayOneClone.debug.xcconfig */,
+				9FB68F68C4254FC51D382A6D /* Pods-DayOneClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A71A91FF22A49BEF005F2EBB = {
 			isa = PBXGroup;
 			children = (
 				A71A920A22A49BEF005F2EBB /* DayOneClone */,
 				A71A920922A49BEF005F2EBB /* Products */,
+				2251AC984F0A2ED3F998A54A /* Pods */,
+				C30950CEA4CACD28B4A1B554 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +86,21 @@
 				A71A921D22A72F37005F2EBB /* JournalDetailViewController.swift */,
 				A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */,
 				A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */,
+				A71A922522AA4909005F2EBB /* Models.swift */,
 				A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */,
 				A71A921222A49BF3005F2EBB /* Assets.xcassets */,
 				A71A921422A49BF3005F2EBB /* LaunchScreen.storyboard */,
 				A71A921722A49BF3005F2EBB /* Info.plist */,
 			);
 			path = DayOneClone;
+			sourceTree = "<group>";
+		};
+		C30950CEA4CACD28B4A1B554 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				014D20FC9C1940087399CD81 /* Pods_DayOneClone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71A921A22A49BF3005F2EBB /* Build configuration list for PBXNativeTarget "DayOneClone" */;
 			buildPhases = (
+				B22B292677FEEEDAA0A487FB /* [CP] Check Pods Manifest.lock */,
 				A71A920422A49BEF005F2EBB /* Sources */,
 				A71A920522A49BEF005F2EBB /* Frameworks */,
 				A71A920622A49BEF005F2EBB /* Resources */,
+				24E703E380C5BD9D4FECAB42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +171,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24E703E380C5BD9D4FECAB42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DayOneClone/Pods-DayOneClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DayOneClone/Pods-DayOneClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B22B292677FEEEDAA0A487FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DayOneClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A71A920422A49BEF005F2EBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +231,7 @@
 				A71A922422A72FC4005F2EBB /* PhotoCollectionViewController.swift in Sources */,
 				A71A921E22A72F37005F2EBB /* JournalDetailViewController.swift in Sources */,
 				A71A922022A72F6A005F2EBB /* JournalTableViewController.swift in Sources */,
+				A71A922622AA4909005F2EBB /* Models.swift in Sources */,
 				A71A920C22A49BEF005F2EBB /* AppDelegate.swift in Sources */,
 				A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */,
 			);
@@ -296,6 +377,7 @@
 		};
 		A71A921B22A49BF3005F2EBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147479F32B6A4D8FB5311C64 /* Pods-DayOneClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +396,7 @@
 		};
 		A71A921C22A49BF3005F2EBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB68F68C4254FC51D382A6D /* Pods-DayOneClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
@@ -103,6 +103,22 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        if let realm = try? Realm(){
+            let entry = Entry()
+            entry.text = journalTextView.text
+            entry.date = date
+            for image in images {
+                let picture = Picture(image: image)
+                entry.pictures.append(picture)
+                picture.entry = entry
+                
+            }
+            try? realm.write{
+                realm.add(entry)
+            }
+            dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     
