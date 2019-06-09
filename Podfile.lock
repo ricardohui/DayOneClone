@@ -4,12 +4,10 @@ PODS:
   - Realm/Headers (3.16.1)
   - RealmSwift (3.16.1):
     - Realm (= 3.16.1)
-  - Spring (1.0.6)
   - Toucan (1.1.0)
 
 DEPENDENCIES:
   - RealmSwift (~> 3.16.1)
-  - Spring (from `https://github.com/MengTo/Spring.git`)
   - Toucan (= 1.1.0)
 
 SPEC REPOS:
@@ -18,21 +16,11 @@ SPEC REPOS:
     - RealmSwift
     - Toucan
 
-EXTERNAL SOURCES:
-  Spring:
-    :git: https://github.com/MengTo/Spring.git
-
-CHECKOUT OPTIONS:
-  Spring:
-    :commit: fafd0b2e8d4d46405bd86fa7ba84bb7f73a20b13
-    :git: https://github.com/MengTo/Spring.git
-
 SPEC CHECKSUMS:
   Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
   RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
-  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   Toucan: 8f228fabb21521b9658692df9325fe76e71d74b2
 
-PODFILE CHECKSUM: c325adabdb768ad3cf485d003241cee2826416c1
+PODFILE CHECKSUM: ed9100aca313d92f68114774e2fa496fadf5f2ee
 
 COCOAPODS: 1.6.1

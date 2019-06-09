@@ -8,6 +8,6 @@ target 'DayOneClone' do
   # Pods for DayOneClone
   pod 'RealmSwift', '~>3.16.1'
   pod 'Toucan', '1.1.0'
-  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+
 
 end

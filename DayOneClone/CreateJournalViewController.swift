@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import Spring
+//import Spring
 class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
@@ -69,7 +69,8 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         if let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             images.append(chosenImage)
             
-            let imageView = SpringImageView()
+//            let imageView = SpringImageView()
+            let imageView = UIImageView()
             imageView.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
             imageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
             imageView.image = chosenImage
@@ -78,9 +79,9 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
             stackView.addArrangedSubview(imageView)
             imagePicker.dismiss(animated: true) {
                 //annimation
-                imageView.animation = "pop"
-                imageView.duration = 2.0
-                imageView.annimate()
+//                imageView.animation = "pop"
+//                imageView.duration = 2.0
+//                imageView.annimate()
                 
                 
             }
