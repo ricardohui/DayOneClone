@@ -17,15 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="VdW-5w-taD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lri-1n-esL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j54-JF-kGI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-6U-zjh">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="j54-JF-kGI" firstAttribute="top" secondItem="lri-1n-esL" secondAttribute="top" id="09Q-IO-LdW"/>
+                                    <constraint firstItem="j54-JF-kGI" firstAttribute="leading" secondItem="lri-1n-esL" secondAttribute="leading" id="1PR-Bd-DiM"/>
+                                    <constraint firstItem="j54-JF-kGI" firstAttribute="width" secondItem="lri-1n-esL" secondAttribute="width" id="D7B-fq-0Pr"/>
+                                    <constraint firstAttribute="bottom" secondItem="j54-JF-kGI" secondAttribute="bottom" id="eLR-8p-vIC"/>
+                                    <constraint firstAttribute="trailing" secondItem="j54-JF-kGI" secondAttribute="trailing" id="iS6-wE-EMT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lri-1n-esL" firstAttribute="trailing" secondItem="UJ5-9I-Jjj" secondAttribute="trailing" id="9Uq-rs-wOz"/>
+                            <constraint firstItem="lri-1n-esL" firstAttribute="bottom" secondItem="UJ5-9I-Jjj" secondAttribute="bottom" id="fiD-ao-MxP"/>
+                            <constraint firstItem="lri-1n-esL" firstAttribute="leading" secondItem="UJ5-9I-Jjj" secondAttribute="leading" id="h4N-dr-dZo"/>
+                            <constraint firstItem="lri-1n-esL" firstAttribute="top" secondItem="UJ5-9I-Jjj" secondAttribute="top" id="l8F-G4-gVl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UJ5-9I-Jjj"/>
                     </view>
+                    <connections>
+                        <outlet property="journalTextLabel" destination="9KC-6U-zjh" id="Pdd-vC-L77"/>
+                        <outlet property="stackView" destination="j54-JF-kGI" id="aZn-Ld-on0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boU-Mm-Otg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="-122"/>
+            <point key="canvasLocation" x="639" y="40"/>
         </scene>
-        <!--Item-->
+        <!--Photos-->
         <scene sceneID="iSL-oZ-hxB">
             <objects>
                 <collectionViewController id="lvN-7u-yOs" customClass="PhotoCollectionViewController" customModule="DayOneClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +126,10 @@
                             <outlet property="delegate" destination="lvN-7u-yOs" id="7DF-uE-CRM"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="OcW-Rl-KSP"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="cameraIcon" id="OcW-Rl-KSP"/>
+                    <connections>
+                        <segue destination="UVB-kG-tKm" kind="showDetail" identifier="photoToDetail" id="Yff-wQ-2aZ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD8-0c-ovE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="696" y="-786"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="Xse-tb-fnn">
             <objects>
                 <tableViewController id="aTB-cH-q9v" customClass="JournalTableViewController" customModule="DayOneClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,11 +276,12 @@
                             <outlet property="delegate" destination="aTB-cH-q9v" id="hpm-pB-aRn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="kH5-Cx-PM7"/>
+                    <tabBarItem key="tabBarItem" title="List" image="database" id="kH5-Cx-PM7"/>
                     <connections>
                         <outlet property="cameraButton" destination="sbD-UU-HXw" id="y50-G2-xi1"/>
                         <outlet property="plusButton" destination="I7H-O9-nSh" id="JYl-1f-zBy"/>
                         <segue destination="1vr-KF-a2x" kind="presentation" identifier="goToNew" id="s19-KZ-iKw"/>
+                        <segue destination="UVB-kG-tKm" kind="showDetail" identifier="tableToDetail" id="dXs-MC-K5p"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcV-Ee-dG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,6 +453,11 @@
     <resources>
         <image name="calendar" width="512" height="512"/>
         <image name="camera" width="512" height="512"/>
+        <image name="cameraIcon" width="30" height="30"/>
+        <image name="database" width="30" height="30"/>
         <image name="plus" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Yff-wQ-2aZ"/>
+    </inferredMetricsTieBreakers>
 </document>

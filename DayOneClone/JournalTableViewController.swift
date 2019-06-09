@@ -63,6 +63,11 @@ class JournalTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let entry = entries?[indexPath.row]{
+            performSegue(withIdentifier: "tableToDetail", sender: entry)
+        }
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalCell{
             if let entry = entries?[indexPath.row]{
@@ -99,7 +104,13 @@ class JournalTableViewController: UITableViewController {
                     createVC?.startWithCamera = true
                 }
             }
+        }else if segue.identifier == "tableToDetail", let entry = sender as? Entry{
+            if let detailVC = segue.destination as? JournalDetailViewController{
+                detailVC.entry = entry
+            }
         }
+        
+        
     }
 
 }

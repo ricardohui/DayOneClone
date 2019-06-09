@@ -55,6 +55,16 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
     
         return UICollectionViewCell()
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "photoToDetail", sender: pictures?[indexPath.row].entry)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoToDetail",let entry = sender as? Entry, let detailVC = segue.destination as? JournalDetailViewController  {
+            detailVC.entry = entry
+        }
+    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width / 2, height: collectionView.frame.size.width / 2)
