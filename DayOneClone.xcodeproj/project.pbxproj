@@ -17,6 +17,7 @@
 		A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */; };
 		A71A922422A72FC4005F2EBB /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */; };
 		A71A922622AA4909005F2EBB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922522AA4909005F2EBB /* Models.swift */; };
+		A71A922822AB32C6005F2EBB /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A922722AB32C6005F2EBB /* SplitViewController.swift */; };
 		D53E78DE970E5A3BF99655DF /* Pods_DayOneClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014D20FC9C1940087399CD81 /* Pods_DayOneClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
 		A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		A71A922522AA4909005F2EBB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A71A922722AB32C6005F2EBB /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A71A920F22A49BEF005F2EBB /* Main.storyboard */,
 				A71A921D22A72F37005F2EBB /* JournalDetailViewController.swift */,
 				A71A921F22A72F6A005F2EBB /* JournalTableViewController.swift */,
+				A71A922722AB32C6005F2EBB /* SplitViewController.swift */,
 				A71A922122A72F98005F2EBB /* CreateJournalViewController.swift */,
 				A71A922522AA4909005F2EBB /* Models.swift */,
 				A71A922322A72FC4005F2EBB /* PhotoCollectionViewController.swift */,
@@ -234,6 +237,7 @@
 				A71A922622AA4909005F2EBB /* Models.swift in Sources */,
 				A71A920C22A49BEF005F2EBB /* AppDelegate.swift in Sources */,
 				A71A922222A72F98005F2EBB /* CreateJournalViewController.swift in Sources */,
+				A71A922822AB32C6005F2EBB /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

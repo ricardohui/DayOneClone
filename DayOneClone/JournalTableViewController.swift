@@ -22,6 +22,11 @@ class JournalTableViewController: UITableViewController {
         plusButton.imageView?.contentMode = .scaleAspectFit
         cameraButton.imageView?.contentMode = .scaleAspectFit
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4cc1fc
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
        getEntries()
     }
 
@@ -68,6 +73,10 @@ class JournalTableViewController: UITableViewController {
                 }else{
                     cell.imageViewWidth.constant = 0
                 }
+                
+                cell.monthLabel.text = entry.monthString()
+                cell.dayLabel.text = entry.dayString()
+                cell.yearLabel.text = entry.yearString()
             }
             
             

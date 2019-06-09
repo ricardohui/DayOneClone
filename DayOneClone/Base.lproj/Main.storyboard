@@ -33,20 +33,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mcR-T7-Qyv">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mcR-T7-Qyv">
+                            <size key="itemSize" width="269" height="235"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KTt-q2-nJi">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="KTt-q2-nJi" customClass="PhotoCell" customModule="DayOneClone" customModuleProvider="target">
+                                <rect key="frame" x="53" y="0.0" width="269" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="269" height="235"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otu-vs-ieD">
+                                            <rect key="frame" x="0.0" y="0.0" width="269" height="235"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czn-Yd-hsE">
+                                            <rect key="frame" x="0.0" y="193" width="269" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-1U-YRm">
+                                            <rect key="frame" x="8" y="134" width="253" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="b9l-DP-8FJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Czn-Yd-hsE" firstAttribute="top" secondItem="9Tx-1U-YRm" secondAttribute="bottom" constant="9" id="07v-6k-5XR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Czn-Yd-hsE" secondAttribute="bottom" id="2J2-44-nUJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Czn-Yd-hsE" secondAttribute="trailing" id="4Al-pH-zBg"/>
+                                    <constraint firstAttribute="trailing" secondItem="otu-vs-ieD" secondAttribute="trailing" id="8Wk-iS-RDN"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="9Tx-1U-YRm" secondAttribute="trailing" id="EkM-6H-yPA"/>
+                                    <constraint firstItem="9Tx-1U-YRm" firstAttribute="leading" secondItem="KTt-q2-nJi" secondAttribute="leadingMargin" id="ErS-X3-lvd"/>
+                                    <constraint firstItem="Czn-Yd-hsE" firstAttribute="leading" secondItem="KTt-q2-nJi" secondAttribute="leading" id="IZ3-Te-ytK"/>
+                                    <constraint firstItem="otu-vs-ieD" firstAttribute="leading" secondItem="KTt-q2-nJi" secondAttribute="leading" id="Jac-LG-u6B"/>
+                                    <constraint firstAttribute="bottom" secondItem="otu-vs-ieD" secondAttribute="bottom" id="WKn-bu-CBE"/>
+                                    <constraint firstItem="otu-vs-ieD" firstAttribute="top" secondItem="KTt-q2-nJi" secondAttribute="top" id="jaM-e8-okM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dayLabel" destination="9Tx-1U-YRm" id="vOh-lr-sAx"/>
+                                    <outlet property="monthYearLabel" destination="Czn-Yd-hsE" id="a3k-mx-TM1"/>
+                                    <outlet property="previewImagView" destination="otu-vs-ieD" id="oIA-TP-AMA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -58,7 +95,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD8-0c-ovE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-2"/>
+            <point key="canvasLocation" x="1648.8" y="-2.2488755622188905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VPN-7f-r3I">
@@ -67,6 +104,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vba-yk-HBi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="xtg-H6-qcy" kind="relationship" relationship="rootViewController" id="svz-1E-b3u"/>
@@ -338,11 +378,11 @@
             </objects>
             <point key="canvasLocation" x="3156" y="-786.65667166416802"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Day One Clone-->
         <scene sceneID="pDB-6J-RYO">
             <objects>
                 <tabBarController id="xtg-H6-qcy" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="oUw-40-bQR"/>
+                    <navigationItem key="navigationItem" title="Day One Clone" id="oUw-40-bQR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0PF-wJ-xiZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -360,7 +400,7 @@
         <!--Split View Controller-->
         <scene sceneID="CfB-1y-g76">
             <objects>
-                <splitViewController id="7Ji-z0-4FG" sceneMemberID="viewController">
+                <splitViewController id="7Ji-z0-4FG" customClass="SplitViewController" customModule="DayOneClone" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="eqt-b8-e8W" kind="relationship" relationship="masterViewController" id="FlA-KZ-Bn3"/>
                         <segue destination="UVB-kG-tKm" kind="relationship" relationship="detailViewController" id="0w9-34-Eks"/>
